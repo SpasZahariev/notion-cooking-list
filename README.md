@@ -31,7 +31,7 @@ Automates weekly mealprep by picking random recipes from Notion and populating a
 
 3. Run:
    ```bash
-   python main.py
+   python3 main.py
    ```
 
 ## GitHub Actions
