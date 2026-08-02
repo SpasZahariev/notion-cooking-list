@@ -1,0 +1,18 @@
+name: Weekly Mealprep
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mealprep:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run mealprep script
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: python main.py
